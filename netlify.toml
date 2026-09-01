@@ -1,0 +1,8 @@
+[build]
+  base = "Six-months"
+  command = "pnpm run build"
+  publish = "artifacts/six-months-of-us/dist/public"
+  functions = "functions"
+
+[build.environment]
+  NODE_VERSION = "18"
