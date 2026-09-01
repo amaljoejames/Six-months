@@ -1,0 +1,5 @@
+{
+  "buildCommand": "pnpm run build",
+  "outputDirectory": "artifacts/six-months-of-us/dist/public",
+  "installCommand": "pnpm install"
+}
