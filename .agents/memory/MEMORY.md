@@ -1,0 +1,1 @@
+- [Conversation-uploaded media](conversation-uploaded-media.md) — after a project handoff, uploaded assets may need copying into the app's own public/import path.
