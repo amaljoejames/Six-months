@@ -1,13 +1,5 @@
 {
   "buildCommand": "pnpm run build",
   "outputDirectory": "artifacts/six-months-of-us/dist/public",
-  "installCommand": "pnpm install",
-  "version": 2,
-  "framework": null,
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
+  "installCommand": "pnpm install"
 }
