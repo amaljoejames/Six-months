@@ -46,6 +46,9 @@ import tealKiss from '@assets/jhgjfjff_1788273516892.jpeg';
 import coupleMirror from '@assets/WhatsApp_Image_2026-09-01_at_6.58.30_PM_1788273535868.jpeg';
 import contactSheet from '@assets/WhatsApp_Image_2026-09-01_at_6.58.31_PM_1788273535868.jpeg';
 import nightMemory from '@assets/WhatsApp_Image_2026-09-01_at_6.58.32_PM_1788273535869.jpeg';
+import mirrorCuddle from '@assets/jhguhv_1788274774618.jpeg';
+import portraitTouch from '@assets/jhjhfjfh_1788274774619.jpeg';
+import heartGlow from '@assets/kgkhkgkg_1788274774619.jpeg';
 
 const queryClient = new QueryClient();
 
@@ -83,6 +86,9 @@ const photos: PhotoMedia[] = [
   { id: 'couple-mirror', src: coupleMirror, alt: 'Couple mirror selfie with a handmade card', caption: 'still us', note: 'Same mirror, new memories, exactly the right amount of chaos.', className: 'photo-large', accent: 'rust' },
   { id: 'contact', src: contactSheet, alt: 'Black and white contact sheet of couple memories', caption: 'proof sheet', note: 'Every frame says something slightly different. All of them say us.', className: 'photo-tall', accent: 'ink' },
   { id: 'night', src: nightMemory, alt: 'Nighttime couple memory', caption: 'after dark', note: 'The late-night chapter, where everything felt like a secret.', className: 'photo-medium', accent: 'blue' },
+  { id: 'mirror-cuddle', src: mirrorCuddle, alt: 'Couple cuddling in a bedroom mirror selfie', caption: 'the softest kind of chaos', note: 'A mirror, a hoodie, and nowhere else to be.', className: 'photo-large', accent: 'mustard' },
+  { id: 'portrait-touch', src: portraitTouch, alt: 'Close couple portrait with a hand on a cheek', caption: 'held together', note: 'The kind of photo that makes a whole room feel quiet.', className: 'photo-medium', accent: 'coral' },
+  { id: 'heart-glow', src: heartGlow, alt: 'Couple kissing inside a glowing pink heart effect', caption: 'ridiculously us', note: 'A little dramatic, a little blurry, completely worth keeping.', className: 'photo-tall', accent: 'pink' },
 ];
 
 type VideoMemory = { id: string; src: string; poster: string; title: string; eyebrow: string; caption: string };
@@ -324,6 +330,7 @@ function AppHome() {
           </button>
           <nav className={`${mobileMenu ? 'flex' : 'hidden'} absolute left-0 right-0 top-full flex-col gap-4 border-b border-[#5b3c3c]/10 bg-[#f2e9d8] px-5 py-5 sm:static sm:flex sm:flex-row sm:items-center sm:border-0 sm:bg-transparent sm:p-0`} aria-label="Memory sections">
             <button type="button" onClick={() => scrollTo('story')} className="text-left font-mono-display text-[10px] uppercase tracking-[.16em] opacity-65 hover:opacity-100" data-testid="button-nav-story">our story</button>
+            <button type="button" onClick={() => scrollTo('ordinary')} className="text-left font-mono-display text-[10px] uppercase tracking-[.16em] opacity-65 hover:opacity-100" data-testid="button-nav-ordinary">little things</button>
             <button type="button" onClick={() => scrollTo('wall')} className="text-left font-mono-display text-[10px] uppercase tracking-[.16em] opacity-65 hover:opacity-100" data-testid="button-nav-wall">the wall</button>
             <button type="button" onClick={() => scrollTo('future')} className="text-left font-mono-display text-[10px] uppercase tracking-[.16em] opacity-65 hover:opacity-100" data-testid="button-nav-future">next chapter</button>
             <button type="button" onClick={() => setShowNote(true)} className="inline-flex items-center gap-2 rounded-full bg-[#321e29] px-4 py-2 text-left text-xs font-semibold text-[#f8edda]" data-testid="button-nav-note"><Mail size={13} /> open a note</button>
@@ -350,7 +357,7 @@ function AppHome() {
 
         <section className="border-y border-[#5b3c3c]/10 bg-[#e9dfcb]/55">
           <div className="mx-auto grid max-w-7xl grid-cols-2 px-5 py-8 sm:grid-cols-4 sm:px-8">
-            {[['01', 'tiny keepsakes'], ['02', 'camera roll eras'], ['03', 'vertical videos'], ['∞', 'more to come']].map(([number, label], index) => <Reveal key={label} delay={index % 4}><div className="border-r border-[#5b3c3c]/15 px-4 first:pl-0 last:border-0"><p className="font-display text-3xl text-[#a44a55] sm:text-4xl">{number}</p><p className="mt-1 font-mono-display text-[9px] uppercase tracking-[.12em] opacity-55">{label}</p></div></Reveal>)}
+            {[['06', 'months together'], [String(photos.length).padStart(2, '0'), 'memories kept'], [String(videos.length).padStart(2, '0'), 'moving moments'], ['∞', 'more to come']].map(([number, label], index) => <Reveal key={label} delay={index % 4}><div className="border-r border-[#5b3c3c]/15 px-4 first:pl-0 last:border-0"><p className="font-display text-3xl text-[#a44a55] sm:text-4xl">{number}</p><p className="mt-1 font-mono-display text-[9px] uppercase tracking-[.12em] opacity-55">{label}</p></div></Reveal>)}
           </div>
         </section>
 
@@ -374,9 +381,43 @@ function AppHome() {
           </div>
         </section>
 
+        <section id="ordinary" className="relative overflow-hidden bg-[#f8edda] px-5 py-28 sm:px-8 sm:py-40">
+          <div className="absolute -left-12 top-20 font-display text-[15rem] leading-none text-[#21767b]/[.07]">♡</div>
+          <div className="relative mx-auto max-w-7xl">
+            <Reveal><SectionHeading kicker="interlude / ordinary magic" title={<>The best parts<br /><em className="text-[#a44a55]">were not planned.</em></>} copy="The camera roll keeps the big moments, but love usually lives in the in-between: one more mirror picture, a hand on a cheek, a reason to stay five minutes longer." /></Reveal>
+            <div className="mt-16 grid items-start gap-10 lg:grid-cols-[.9fr_1.1fr]">
+              <Reveal delay={1}>
+                <div className="space-y-4">
+                  {[
+                    ['06:03 PM', 'one more photo before leaving', 'Because the light was good and we were together.'],
+                    ['11:47 PM', 'the conversation that kept going', 'The hour got late; neither of us noticed.'],
+                    ['01:12 AM', 'a little too much affection', 'No witnesses. No regrets. Just us being us.'],
+                  ].map(([time, title, copy], index) => (
+                    <div key={time} className="grid grid-cols-[82px_1fr] gap-4 border-t border-[#321e29]/15 py-5">
+                      <p className="font-mono-display text-[10px] uppercase tracking-[.12em] text-[#a44a55]">{time}</p>
+                      <div><p className="font-display text-2xl leading-none">{title}</p><p className="mt-2 text-sm leading-6 text-[#321e29]/60">{copy}</p></div>
+                      <span className="col-start-2 font-display text-2xl text-[#e8b45c]">0{index + 1} / kept</span>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
+              <Reveal delay={2}>
+                <div className="grid gap-7 sm:grid-cols-[1.15fr_.85fr] sm:items-end">
+                  <div className="photo-card aspect-[4/5] rotate-[2deg] border-[9px] border-white"><img src={mirrorCuddle} alt="Couple cuddling in a bedroom mirror selfie" /><span className="absolute bottom-4 left-4 bg-[#f8edda] px-3 py-2 font-display text-lg text-[#321e29] shadow-md">nothing fancy. everything.</span></div>
+                  <div className="space-y-5 sm:pb-5">
+                    <div className="rotate-[-3deg] bg-[#e8b45c] p-5 shadow-lg"><p className="font-mono-display text-[9px] uppercase tracking-[.18em] text-[#321e29]/60">field note / 002</p><p className="mt-3 font-display text-3xl leading-none">ordinary is our favourite kind of special.</p></div>
+                    <div className="photo-card aspect-[3/4] rotate-[-4deg] border-[7px] border-white"><img src={portraitTouch} alt="Close couple portrait with a hand on a cheek" /></div>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
         <section id="moving" className="mx-auto max-w-7xl px-5 py-28 sm:px-8 sm:py-40">
            <Reveal><SectionHeading kicker="interlude / press play" title={<>Still frames<br /><em className="text-[#21767b]">were not enough.</em></>} copy="For the bits that wobble, breathe, and disappear too quickly if you are not paying attention." /></Reveal>
-          <div className="mt-16 grid gap-7 md:grid-cols-3">{videos.map((video, index) => <Reveal key={video.id} delay={index + 1}><VideoMemoryCard video={video} /></Reveal>)}</div>
+          <div className="mt-16 grid gap-7 md:grid-cols-2 lg:grid-cols-4">{videos.map((video, index) => <Reveal key={video.id} delay={(index % 4) + 1}><VideoMemoryCard video={video} /></Reveal>)}</div>
+          <Reveal delay={2}><div className="mt-16 grid gap-8 border-t border-[#5b3c3c]/15 pt-8 md:grid-cols-[1fr_auto] md:items-center"><p className="max-w-2xl font-display text-3xl leading-tight">A moving archive of the way we look at each other when we forget the camera is there.</p><button type="button" onClick={() => scrollTo('wall')} className="inline-flex w-fit items-center gap-3 rounded-full bg-[#21767b] px-5 py-3 text-sm font-semibold text-[#f8edda]" data-testid="button-moving-to-wall">keep looking <ArrowDown size={15} /></button></div></Reveal>
         </section>
 
         <section id="wall" className="border-y border-[#5b3c3c]/10 bg-[#dfd5c3]/45 px-5 py-28 sm:px-8 sm:py-40">
