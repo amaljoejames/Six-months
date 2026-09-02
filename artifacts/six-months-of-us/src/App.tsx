@@ -26,6 +26,7 @@ import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
+import MuskanExperience from '@/pages/muskan';
 import { Route, Switch, useLocation, Router as WouterRouter } from 'wouter';
 
 import handPhoto from '@assets/,bkhfjdjd_1788273496727.jpeg';
@@ -478,6 +479,7 @@ function Router() {
     <RoutedErrorBoundary>
       <Switch>
         <Route path="/" component={AppHome} />
+        <Route path="/muskan" component={MuskanExperience} />
         <Route component={NotFound} />
       </Switch>
     </RoutedErrorBoundary>
