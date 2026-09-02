@@ -3,5 +3,11 @@
   "outputDirectory": "artifacts/six-months-of-us/dist/public",
   "installCommand": "pnpm install",
   "framework": null,
-  "type": "static"
+  "type": "static",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
