@@ -1,7 +1,8 @@
 {
-  "buildCommand": "cd artifacts/six-months-of-us && pnpm run build",
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "pnpm --filter @workspace/six-months-of-us run build",
   "outputDirectory": "artifacts/six-months-of-us/dist/public",
-  "installCommand": "pnpm install",
+  "installCommand": "pnpm install --frozen-lockfile",
   "rewrites": [
     {
       "source": "/(.*)",
