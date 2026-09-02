@@ -1,5 +1,5 @@
 {
-  "buildCommand": "pnpm run build",
+  "buildCommand": "cd artifacts/six-months-of-us && pnpm run build",
   "outputDirectory": "artifacts/six-months-of-us/dist/public",
   "installCommand": "pnpm install",
   "rewrites": [
